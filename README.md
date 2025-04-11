@@ -1,5 +1,5 @@
 # SharedCoolingAbility
-- 知乎链接:https://zhuanlan.zhihu.com/p/32216887423/edit
+- 知乎链接:https://zhuanlan.zhihu.com/p/32216887423
 - 案例链接:https://github.com/hbdjzwl/SharedCoolingTest  (插件支持4.27~5.5,Demo是5.5的版本)
 
 在常规游戏中共享CD还是会经常会使用到的。比如魔兽世界的技能会有一个1秒的公共CD，某些游戏的同类药品、特殊道具再使用后会进入一个公共CD。一些MOBA或者RTS游戏也会遇见。
