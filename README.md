@@ -1,2 +1,5 @@
 # SharedCoolingAbility
- 公共CD插件
+SharedCoolingAbility是一款简洁式开箱即用支持单机、联机的共享冷却插件，不需要你写一行代码，也不会耦合你的项目代码，只需要在自己的AbilitySystemComponent类继承一个接口和继承自共享冷却Ability即可实现公共CD。不管你是项目使用还是插件使用都非常的便捷。
+
+知乎链接:https://zhuanlan.zhihu.com/p/32216887423/edit
+
