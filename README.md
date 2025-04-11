@@ -51,7 +51,7 @@ SharedCoolingAbility是一款简洁式开箱即用支持单机、联机的共享
 - bSelfActivateDontSharedCoolDefaultConfig : 如果为true,当前激活GA的技能是不会被共享CD限制，其他拥有这个Tag的GA会进入冷却。（通俗来讲就是约束别人，不约束自己。）
 - EventNotifyPlicy: 事件通知策略，当CD开始或结束时发起一个Event，可以是只通知客户端、或只通知服务端、也可以是双端都通知。（比如客户端接收到CD的通知，更新UI层面的表示）
 > 该插件内置了Event.Cooling.Start和Event.Cooling.End两个Tag分别代表当冷却开始和冷却结束
-![Cooling_3](https://github.com/hbdjzwl/ImageLibrary/blob/main/SharedCoolingAbilityImage/Cooling_3.png)
+![Cooling_13](https://github.com/hbdjzwl/ImageLibrary/blob/main/SharedCoolingAbilityImage/Cooling_13.png)
 
 
 ### 4.简单演示
