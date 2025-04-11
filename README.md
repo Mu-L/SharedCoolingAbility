@@ -20,10 +20,14 @@ SharedCoolingAbility是一款简洁式开箱即用支持单机、联机的共享
 
 
 ## 插件使用方法
-### 1.打开插件
+### 1.安装插件
+将插件下载并放入 ../Project/Plugins 项目插件目录下
+![Cooling_14](https://github.com/hbdjzwl/ImageLibrary/blob/main/SharedCoolingAbilityImage/Cooling_14.png)
+
+### 2.打开插件
 ![Cooling_5](https://github.com/hbdjzwl/ImageLibrary/blob/main/SharedCoolingAbilityImage/Cooling_5.png)
 
-### 2.继承接口
+### 3.继承接口
 - 方法一：直接使用插件里UASC_SharedCoolingComponent。
 - 方法二：自定义AbilitySystemComponent然后继承自ISharedCoolingnterface。
   
@@ -32,7 +36,7 @@ SharedCoolingAbility是一款简洁式开箱即用支持单机、联机的共享
 > 如果你的项目已经用了AbilitySystemComponent，那么直接将你的AbilitySystemComponent继承自ISharedCoolingInterface即可。
 如果你要在自己的项目中使用ISharedCoolingInterface，要记得添加插件的模块，步骤4会讲到。
 
-### 3.创建GA
+### 4.创建GA
 创建继承自GA_SharedCoolingBase的类都可以使用共享CD的功能。
 
 ![Cooling_7](https://github.com/hbdjzwl/ImageLibrary/blob/main/SharedCoolingAbilityImage/Cooling_7.png)
@@ -54,7 +58,7 @@ SharedCoolingAbility是一款简洁式开箱即用支持单机、联机的共享
 ![Cooling_13](https://github.com/hbdjzwl/ImageLibrary/blob/main/SharedCoolingAbilityImage/Cooling_13.png)
 
 
-### 4.简单演示
+### 6.简单演示
 创建3个共享GA，共享冷却分别为5、10、15秒
 ![Cooling_9](https://github.com/hbdjzwl/ImageLibrary/blob/main/SharedCoolingAbilityImage/Cooling_9.png)
 
