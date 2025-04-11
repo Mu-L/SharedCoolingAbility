@@ -21,7 +21,7 @@ SharedCoolingAbility是一款简洁式开箱即用支持单机、联机的共享
 
 ## 插件使用方法
 ### 1.打开插件
-![Cooling_5](https://raw.githubusercontent.com/hbdjzwl/ImageLibrary/refs/heads/main/SharedCoolingAbilityImage/Cooling_5%20.png?token=GHSAT0AAAAAAC6P4UIWDD5FSVF3UB2RZF3EZ7YTUMQ)
+![Cooling_5](https://github.com/hbdjzwl/ImageLibrary/blob/main/SharedCoolingAbilityImage/Cooling_5.png)
 
 ### 2.继承接口
 - 方法一：直接使用插件里UASC_SharedCoolingComponent。
