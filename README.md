@@ -8,7 +8,7 @@
 
 SharedCoolingAbility是一款简洁式开箱即用支持单机、联机的共享冷却插件，不需要你写一行代码，也不会耦合你的项目代码，只需要在自己的AbilitySystemComponent类继承一个接口和继承自共享冷却Ability即可实现公共CD。不管你是项目使用还是插件使用都非常的便捷。
 
-![Cooling_1](https://raw.githubusercontent.com/hbdjzwl/ImageLibrary/refs/heads/main/SharedCoolingAbilityImage/Cooling_1.png?token=GHSAT0AAAAAADCBVRSE4JA264E6AW2E5B3UZ7YZORA)
+![Cooling_1](https://raw.githubusercontent.com/hbdjzwl/ImageLibrary/refs/heads/main/SharedCoolingAbilityImage/Cooling_1.png?token=GHSAT0AAAAAADCBV6LZSK7SFF7QVT5HIKLMZ7YZWDQ)
 
 ## 配置起来也极为方便
 
