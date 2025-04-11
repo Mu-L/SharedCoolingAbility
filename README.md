@@ -4,7 +4,7 @@
 
 在常规游戏中共享CD还是会经常会使用到的。比如魔兽世界的技能会有一个1秒的公共CD，某些游戏的同类药品、特殊道具再使用后会进入一个公共CD。一些MOBA或者RTS游戏也会遇见。
 
-![Cooling_0](https://raw.githubusercontent.com/hbdjzwl/ImageLibrary/refs/heads/main/SharedCoolingAbilityImage/Cooling_0.png?token=GHSAT0AAAAAADCBVHSK5TI7KARTIW2ICLU6Z7YZI3A)
+![Cooling_0](https://raw.githubusercontent.com/hbdjzwl/ImageLibrary/refs/heads/main/SharedCoolingAbilityImage/Cooling_0.png?token=GHSAT0AAAAAADCBVRSEJA7ZGJLCVAZGQEQAZ7YZTDA)
 
 SharedCoolingAbility是一款简洁式开箱即用支持单机、联机的共享冷却插件，不需要你写一行代码，也不会耦合你的项目代码，只需要在自己的AbilitySystemComponent类继承一个接口和继承自共享冷却Ability即可实现公共CD。不管你是项目使用还是插件使用都非常的便捷。
 
