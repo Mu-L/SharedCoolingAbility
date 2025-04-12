@@ -68,3 +68,28 @@ SharedCoolingAbility是一款简洁式开箱即用支持单机、联机的共享
 
 ##### 点击第三个GA，会对其它GA产生15秒的共享CD。
 ![Cooling_12](https://i.postimg.cc/rsKxdR20/Cooling-12.png)
+
+
+## 番外
+### 实例化策略(InstancingPolicy)
+SharedCoolingAbility目前只支持InstancedPerActor策略。由于NonInstanced在5.5版本被废弃所以暂不支持NonInstanced方案。
+
+![Cooling_11](https://i.postimg.cc/2yC38CKb/Cooling-15.png)
+
+
+**【弊端】: 不能只谈好的一面**
+
+- InstancedPerActor类静态成员一般，会Give时预先创建好GA对象。当我们背包里拥有成千上万个不同的物品时就会导致创建大量的GA对象。当然一般背包不会有这么大，玩家也不会同时拥有这么多不同的物品，所以通常也就是在几十上百个左右物品是不需要担心的。
+
+- 在原有支持NonInstanced(CDO)可以用其当做物品的GA使用，这样不管背包有多少个物品，成千上万，也不用担心会额外创建大量的GA对象。但是由于5.5的版本暂时废弃了，所以暂定，看官方后续版本会用什么代替。
+
+- InstancedPerExecution的设定原本就与公共CD有设计歧义，所以不在考虑范围内。
+  
+GAS这套东西是支持单机联机的，匹配DS、LS、单机去使用。所以在有限人数的承载下不需要担心服务器有超额的设计。综合实际考虑用SharedCoolingAbility来做技能的共享CD或者物品道具的共享CD在实际游戏中也是较为合适的了。
+
+### GameplayTag的注册方法
+FGameplayTag的添加方法有很多，该插件使用的是第4种，案例演示用的第2种。
+1. 配置文件DefaultGameplayTags.ini
+2. 项目设置配置GameplayTagTableList表格
+3. 宏UE_DEFINE_GAMEPLAY_TAG_STATIC
+4. GameplayTagNativeAdder类AddTags函数
