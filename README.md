@@ -98,3 +98,53 @@ FGameplayTag的添加方法有很多，该插件使用的是第4种，案例演�
 额外提供了一些常用的方法，比如减少GE的冷却值、同时监听多个事件(不用写大量的WaitEvent)、常用的句柄比对、获取持续时间、调试字符串。
 
 ![Cooling_11](https://i.postimg.cc/Hkjw9FcL/image.png)
+
+
+### 版本差异
+
+5.5的版本中官方对GAS做出了部分提示和修改，使用SharedCoolingAbility可能会有一些警告。
+
+
+#### Replicated 变量的警告:
+
+在4.27~5.4版本GA的Replicated变量都是支持复制的，到了5.5版本中会有以上警告。(但并不影响SharedCoolingAbility插件的使用)
+
+![Cooling_55](https://i.postimg.cc/Gm8RYJRy/5-5.png)
+
+
+
+从UE5.5开始，同步变量的使用已被弃用。弃用警告由控制台变量"AbilitySystem.DeprecateReplicatedProperties 0"控制，因此用户可以关闭警告并继续使用该功能，直到他们准备好解决问题。
+
+![Cooling_55](https://i.postimg.cc/0yTsCM5H/image.png)
+
+这样做的原因是为了防止用户遇到一个无法解决的关于同步顺序的错误：
+
+- 同步变量保证会被传递，但不保证彼此之间或RPC函数的任何特定顺序。
+- 游戏能力激活（以及大多数同步功能，如目标数据）依赖于客户端和服务器之间交换的RPC。
+- 因此，当执行RPC（例如游戏能力激活）并对同步变量执行操作时，你永远不会保证拥有最新或过时的值。
+
+-官方原文-
+> ## Replicated Variables in Gameplay Abilities
+>
+> The usage of replicated variables is deprecated as of UE5.5. The deprecation warning is controlled by a Console Variable "AbilitySystem.DeprecateReplicatedProperties", so that users can turn off the warning and continue using the feature until they are ready to fix the issue.|
+>
+> The reasoning is to prevent users from stumbling upon an impossible-to-solve bug regarding replication ordering:
+>
+> - Replicated variables are guaranteed to be delivered, but not in any particular order with respect to each other or RPC functions.
+> - Gameplay Ability activation (and most synchronizing functions such as Target Data) rely on RPC's exchanged between the Client and Server.
+> - Therefore, when executing an RPC (e.g. Gameplay Ability Activation) and performing operations on a replicated variable, you would never be guaranteed to have an up-to-date or stale value.
+>
+> For more information, see the [EDC article on object replication order](https://dev.epicgames.com/documentation/en-us/unreal-engine/replicated-object-execution-order-in-unreal-engine).
+> If you believe you need a replicated variable, the solution is to instead use a Reliable RPC to send that data over. Using a Reliable RPC will ensure proper ordering with the underlying synchronization mechanisms of GAS.
+
+
+#### NonInstanced 弃用 ：
+
+官方觉得它不好用，不能网络同步、不能保存状态、建议使用InstancedPerActor。
+
+![Cooling_11](https://i.postimg.cc/2yC38CKb/Cooling-15.png)
+
+-官方原文-
+> ## NonInstanced (Deprecated)
+>
+> Prior to UE5.5, we had functionality for Non-Instanced Gameplay Abilities. Since these Gameplay Abilities were never instanced, they could not be replicated or even hold state (e.g. contain variables). All functions were called on the ClassDefaultObject and thus all state had to be held on the Gameplay Ability Spec. This made them very confusing to use. The same functionality can be achieved by simply using InstancedPerActor and never revoking it; the cost is just a single allocation (instance) of a UGameplayAbility.
