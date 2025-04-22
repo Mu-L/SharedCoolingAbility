@@ -97,4 +97,4 @@ FGameplayTag的添加方法有很多，该插件使用的是第4种，案例演�
 ### 额外方法
 额外提供了一些常用的方法，比如减少GE的冷却值、同时监听多个事件(不用写大量的WaitEvent)、常用的句柄比对、获取持续时间、调试字符串。
 
-![Cooling_11](https://i.postimg.cc/c4gGgpGr/Cooling-16.png)
+![Cooling_11](https://i.postimg.cc/Hkjw9FcL/image.png)
