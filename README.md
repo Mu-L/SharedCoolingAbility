@@ -124,7 +124,7 @@ FGameplayTag的添加方法有很多，该插件使用的是第4种，案例演�
 - 因此，当执行RPC（例如游戏能力激活）并对同步变量执行操作时，你永远不会保证拥有最新或过时的值。
 
 -官方原文-
-> ## Replicated Variables in Gameplay Abilities
+> ##### Replicated Variables in Gameplay Abilities
 >
 > The usage of replicated variables is deprecated as of UE5.5. The deprecation warning is controlled by a Console Variable "AbilitySystem.DeprecateReplicatedProperties", so that users can turn off the warning and continue using the feature until they are ready to fix the issue.|
 >
@@ -138,13 +138,13 @@ FGameplayTag的添加方法有很多，该插件使用的是第4种，案例演�
 > If you believe you need a replicated variable, the solution is to instead use a Reliable RPC to send that data over. Using a Reliable RPC will ensure proper ordering with the underlying synchronization mechanisms of GAS.
 
 
-#### NonInstanced 弃用 ：
+##### NonInstanced 弃用 ：
 
 官方觉得它不好用，不能网络同步、不能保存状态、建议使用InstancedPerActor。
 
 ![Cooling_11](https://i.postimg.cc/2yC38CKb/Cooling-15.png)
 
 -官方原文-
-> ## NonInstanced (Deprecated)
+> ###### NonInstanced (Deprecated)
 >
 > Prior to UE5.5, we had functionality for Non-Instanced Gameplay Abilities. Since these Gameplay Abilities were never instanced, they could not be replicated or even hold state (e.g. contain variables). All functions were called on the ClassDefaultObject and thus all state had to be held on the Gameplay Ability Spec. This made them very confusing to use. The same functionality can be achieved by simply using InstancedPerActor and never revoking it; the cost is just a single allocation (instance) of a UGameplayAbility.
